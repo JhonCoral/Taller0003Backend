@@ -1,0 +1,6 @@
+GET url http://localhost:8000/mascotas/buscar HTTP/1.1
+
+POST  http://localhost:8000/mascotas/crear HTTP/1.1
+
+
+
