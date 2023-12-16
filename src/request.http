@@ -1,6 +1,23 @@
 GET url http://localhost:8000/mascotas/buscar HTTP/1.1
-
+###
 POST  http://localhost:8000/mascotas/crear HTTP/1.1
+Content-Type: application/json
 
+{
+ "nombre":"jhon",
+ "edad": 4,
+ "tipo":"gay"  
+}
 
+######
+GET url http://localhost:8000/personas/buscar HTTP/1.1
+###
 
+POST  http://localhost:8000/personas/crear HTTP/1.1
+Content-Type: application/json
+
+{
+ "nombre":"jepaa",
+ "direccion":"udenar",
+ "telefono":"1234"  
+}

@@ -1,10 +1,10 @@
-
 import Sequelize  from "sequelize";
 
 import {db} from "../database/conexion.js";
 
-const mascota = db.define("patitas",{
-    id_mascota:{
+
+const persona = db.define("persona",{
+    id_persona:{
         type:Sequelize.INTEGER,
         allowNull: false,
         autoIncrement: true,
@@ -14,17 +14,14 @@ const mascota = db.define("patitas",{
         type: Sequelize.STRING,
         allowNull: true
     },
-    edad:{
-        type: Sequelize.INTEGER,
+    direccion:{
+        type: Sequelize.STRING,
         allowNull:true
     },
-    tipo:{
+    telefono:{
         type: Sequelize.STRING,
         allowNull: true
     }
 })
 
-
-
-export {mascota}
-
+export{persona}

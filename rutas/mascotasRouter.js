@@ -25,4 +25,3 @@ routerMascotas.delete("/eliminar/:id", (req,res)=>{
 })
 
 export {routerMascotas}
-
