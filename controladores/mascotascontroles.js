@@ -15,7 +15,7 @@ const crear = (req, res) => {
 
     //Usar Sequeliza para crear el recurso
     mascota.create(dataset).then((resultado) => {
-        res.status(200).json("Registro creado correctamente")
+        res.status(200).json("Registro actualizado correctamente")
     }).catch(err => res.send({ mensaje: `Error al crear el registro ::: ${err} `}))
 }
 
@@ -69,7 +69,7 @@ const actualizar = async (req, res) => {
 const eliminar = async (req, res) => {
     try {
         const { id } = req.params;
-        const pet = await patitas.findByPk(id);
+        const pet = await mascota.findByPk(id);
         if (!pet) {
             res.status(404).json({ mensaje: "Mascota no encontrada." });
             return;
