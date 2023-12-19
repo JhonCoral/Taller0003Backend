@@ -4,23 +4,23 @@ import {  crear, getPersonas, buscarById, actualizar, eliminar } from "../contro
 
 const routerPersona = express.Router()
 
-routerPersona.get("/", (req,res)=>{
-    getPets(req,res)
+routerPersona.get("/mostrar", (req,res)=>{
+    getPersonas(req,res)
 })
 
 routerPersona.post("/crear", (req,res)=>{
     crear(req,res)
 })
 
-routerPersona.get("/buscar/:id", (req,res)=>{
+routerPersona.get("/buscar/:id_persona", (req,res)=>{
     buscarById(req,res)
 })
 
-routerPersona.put("/actualizar/:id", (req,res)=>{
+routerPersona.put("/actualizar/:id_persona", (req,res)=>{
     actualizar(req,res)
 })
 
-routerPersona.delete("/eliminar/:id", (req,res)=>{
+routerPersona.delete("/eliminar/:id_persona", (req,res)=>{
     eliminar(req,res)
 })
 

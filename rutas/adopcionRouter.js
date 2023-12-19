@@ -1,26 +1,26 @@
 import express from "express";
-import { crearadopcion, getadopciones, buscaradopcionById, actualizaradopcion, eliminaradopcion } from "../controladores/adopcioncontroladores.js";
+import { crear, getAdopciones, buscarById, actualizar, eliminar } from "../controladores/adopcioncontroladores.js";
 
 const routeradopciones = express.Router();
 
-routeradopciones.get("/", (req, res) => {
-    getadopciones(req, res);
+routeradopciones.get("/mostrar", (req, res) => {
+    getAdopciones(req, res);
 });
 
 routeradopciones.post("/crear", (req, res) => {
-    crearadopcion(req, res);
+    crear(req, res);
 });
 
-routeradopciones.get("/buscar/:id", (req, res) => {
-    buscaradopcionById(req, res);
+routeradopciones.get("/buscar/:id_registro", (req, res) => {
+    buscarById(req, res);
 });
 
-routeradopciones.put("/actualizar/:id", (req, res) => {
-    actualizaradopcion(req, res);
+routeradopciones.put("/actualizar/:id_registro", (req, res) => {
+    actualizar(req, res);
 });
 
-routeradopciones.delete("/eliminar/:id", (req, res) => {
-    eliminaradopcion(req, res);
+routeradopciones.delete("/eliminar/:id_registro", (req, res) => {
+    eliminar(req, res);
 });
 
 export { routeradopciones };
